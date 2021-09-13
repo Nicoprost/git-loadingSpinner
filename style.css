@@ -1,0 +1,97 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+body
+{
+    background-color: rgb(17, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.spinner
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    min-height: 500px;
+    border-radius: 100%;
+    border-bottom: 5px solid rgb(233, 233, 15);
+    border-top: 10px solid red;
+    animation: rot 2s linear infinite;
+}
+
+.spinner1
+{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #2196f3,
+                0 0 40px #2196f3,
+                0 0 80px #2196f3;
+    animation: eye 3s linear infinite;
+
+}
+.spinner2
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f3d421,
+                0 0 40px #f3d421,
+                0 0 80px #f3d421;
+    animation: mineye 3s linear infinite;
+    }
+    
+.spinner::before
+{
+    content: "";
+    height: 500px;
+    min-width: 500px;
+    position: absolute;
+    border-radius: 100%;
+    border-left: 10px solid blue;
+    border-right: 10px solid rgb(206, 114, 32);
+    left: -10px;
+
+}
+
+
+@keyframes rot 
+{
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes eye
+{
+    
+    100%{
+        transform: scale(0);
+    }
+    0%{
+        transform: scale(50);
+    }
+}
+@keyframes mineye
+{
+    
+    100%{
+        transform: scale(15);
+    }
+    0%{
+        transform: scale(0);
+    }
+}
